@@ -1,0 +1,28 @@
+import java.util.*; 
+ public class ThrowsDemo  {
+       public  int division(int a, int b) throws ArithmeticException  {
+               int rs;
+               rs = a / b;
+               return(rs);
+      }
+   public static void main(String[] args)  {
+            ThrowsDemo T = new ThrowsDemo();
+            int rs=0;
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter first number");
+            int a = input.nextInt();
+            System.out.println("Enter second number");
+            int b = input.nextInt();
+            try  {
+                rs= T.division(a,b);
+                  }
+            catch(ArithmeticException Ex)  {
+                System.out.print("\n\tError : " + Ex.getMessage());
+                }
+            finally {
+               System.out.print("\n\tThe result is : " + rs);
+            }
+            System.out.print("\n\tEnd of program.");
+        }
+    }
+
